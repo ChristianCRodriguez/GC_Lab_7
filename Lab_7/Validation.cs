@@ -51,7 +51,7 @@ namespace Lab_7
         }
         public static void ValidateHTML(string input)
         {
-            if (Regex.IsMatch(input, @"^(<{1}[A-z]{1,}>{1})(.{0,})(<{1}\/{1}[A-z]{1,}>{1})"))
+            if (Regex.IsMatch(input, @"<{1}(\w)>{1}(.*)(<{1}\/{1}(\1)>{1})"))
             {
                 Console.WriteLine("HTML is valid!\n");
             }
